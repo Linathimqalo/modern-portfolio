@@ -11,6 +11,11 @@
 # next.js
 /.next/
 /out/
+/dist/
+
+# sanity node modules
+sanity/node_modules
+portfolio-stack-backend/node_modules
 
 # production
 /build
@@ -34,3 +39,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel
