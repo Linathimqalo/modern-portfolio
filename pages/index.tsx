@@ -9,7 +9,7 @@ import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 
-import { Experience, PageInfo, Skill, Project, Social } from "../typings";
+import { PageInfo, Experience, Skill, Project, Social } from "../typings";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchExperiences } from "../utils/fetchExperiences";
 import { fetchSkills } from "../utils/fetchSkills";
@@ -22,7 +22,7 @@ type Props = {
   skills: Skill[];
   projects: Project[];
   socials: Social[];
-}
+};
 
 const Home = ({ pageInfo, experiences, skills, socials, projects }: Props) => {
   return (
@@ -32,7 +32,7 @@ const Home = ({ pageInfo, experiences, skills, socials, projects }: Props) => {
     scrollbar-thumb-[#F7AB0A]/80"
     >
       <Head>
-        <title>{pageInfo?.name} - Portfolio</title>
+        <title>Linathi Mqalo Portfolio</title>
       </Head>
       <Header socials={socials} />
 
@@ -69,6 +69,7 @@ const Home = ({ pageInfo, experiences, skills, socials, projects }: Props) => {
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
             <img
+              alt="Home"
               className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLuLab5iefjvAD2wVjPIHFEOFPIUlPURY2w&usqp=CAU"
             />
@@ -87,7 +88,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProject();
   const socials: Social[] = await fetchSocial();
-  
+
   return {
     props: {
       pageInfo,
@@ -97,8 +98,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       socials,
     },
     //Next.js will attempt to keep re-generating the page;
-    //Whenever a request comes in 
+    //Whenever a request comes in
     //At most once every 100 seconds
     revalidate: 100,
-  }
-}
+  };
+};

@@ -30,7 +30,7 @@ function ContactMe({}: Props) {
       <div className="flex flex-col space-y-5">
         <h4 className="text-3xl font-semibold text-center">
           Have A Seat And Drink Some Tea With Me.{" "}
-          <span className="underline decoration-[#F7AB0A]/70">Let's Talk.</span>
+          <span className="underline decoration-[#F7AB0A]/70">Let Us Talk.</span>
         </h4>
 
         <div className="space-y-5">

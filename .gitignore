@@ -14,7 +14,6 @@
 /dist/
 
 # sanity node modules
-sanity/node_modules
 portfolio-stack-backend/node_modules
 
 # production
@@ -41,3 +40,6 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# babel
+.babelrc
